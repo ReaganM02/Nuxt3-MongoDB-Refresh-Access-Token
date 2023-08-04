@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@types/node": "^18.17.1",
+    "nuxt": "^3.6.5"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "^0.17.5",
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongo-sanitize": "^1.1.0",
+    "mongoose": "^7.4.2",
+    "mongoose-sanitize": "^1.1.0",
+    "nanoid": "^4.0.2",
+    "nanoid-dictionary": "^4.3.0",
+    "xss": "^1.0.14"
+  }
+}
