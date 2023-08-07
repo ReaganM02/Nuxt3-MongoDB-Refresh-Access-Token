@@ -65,7 +65,14 @@ async function onSignIn(formData: SignInRequestBody, node: FormKitNode | undefin
                         @click.prevent="showPassword = !showPassword"
                     />
                 </div>
-
+                <div class="mt-8">
+                    <NuxtLink
+                        to="/forgot-password"
+                        class="text-zinc-600 cursor-pointer text-sm hover:text-blue-700 hover:underline"
+                    >
+                        I forgot my password
+                    </NuxtLink>
+                </div>
                 <div class="mt-8">
                     <AccountFormSubmit
                         label="Sign in"
