@@ -1,0 +1,17 @@
+{
+    "extends": [
+        "@nuxtjs/eslint-config-typescript"
+    ],
+     "rules": {
+        "indent": "off",
+        "vue/html-indent": "off",
+        "vue/multi-word-component-names": "off",
+        "space-before-function-paren": "off",
+        "no-tabs": "off",
+        "vue/html-closing-bracket-newline": "off",
+        "import/default": "off",
+        "import/no-named-as-default-member": "off",
+        "no-lonely-if": "off",
+        "array-bracket-spacing": "off"
+      } 
+}
