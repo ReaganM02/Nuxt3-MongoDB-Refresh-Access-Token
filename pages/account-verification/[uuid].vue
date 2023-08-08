@@ -3,7 +3,8 @@ import { NuxtError } from 'nuxt/app'
 import { FormKitNode } from '@formkit/core'
 
 definePageMeta({
-    layout: 'user'
+    layout: 'user',
+    middleware: 'unauth'
 })
 
 const message = ref<string | null>(null)

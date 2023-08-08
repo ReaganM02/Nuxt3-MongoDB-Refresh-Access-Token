@@ -2,7 +2,8 @@
 import { NuxtError } from 'nuxt/app'
 import { FormKitNode } from '@formkit/core'
 definePageMeta({
-    layout: 'user'
+    layout: 'user',
+    middleware: ['unauth']
 })
 const { id, uuid } = useRoute().query
 const loading = ref(false)

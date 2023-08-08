@@ -4,7 +4,8 @@ import { NuxtError } from 'nuxt/app'
 import { SignInRequestBody } from 'types/user'
 
 definePageMeta({
-    layout: 'user'
+    layout: 'user',
+    middleware: 'unauth'
 })
 
 const loading = ref(false)

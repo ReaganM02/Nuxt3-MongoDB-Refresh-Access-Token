@@ -2,7 +2,8 @@
 import { FormKitNode } from '@formkit/core'
 import { NuxtError } from 'nuxt/app'
 definePageMeta({
-    layout: 'user'
+    layout: 'user',
+    middleware: 'unauth'
 })
 
 const loading = ref(false)
