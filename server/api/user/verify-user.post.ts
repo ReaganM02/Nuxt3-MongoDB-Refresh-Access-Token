@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
         user.verificationCodeExpAt = undefined
         user.save()
 
-        const token = signToken({ uuid: user.uuid }, useRuntimeConfig().TOKEN_SECRET)
+        const token = signToken({ uuid: user.uuid }, useRuntimeConfig().TOKEN_SECRET, '15m')
         setCookie(event, 'authorization', token, {
             httpOnly: true,
             secure: true,

@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
         if (!isPasswordCorrect) {
             return createError({ statusCode: 401, statusMessage: 'Invalid email or password' })
         }
-        const token = signToken({ uuid: user.uuid }, useRuntimeConfig().TOKEN_SECRET)
+        const token = signToken({ uuid: user.uuid }, useRuntimeConfig().TOKEN_SECRET, '30d')
         setCookie(event, 'authorization', token, {
             httpOnly: true,
             secure: true,
