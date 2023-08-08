@@ -28,3 +28,13 @@ export interface VerifyUserPayload {
 export interface ReverifyUserPayload {
     uuid: number
 }
+
+export interface UserData {
+    uuid: number
+    firstName: string
+    lastName: string
+    email: string
+    verified: true
+    createdAt: Date
+    updatedAt: Date
+}
