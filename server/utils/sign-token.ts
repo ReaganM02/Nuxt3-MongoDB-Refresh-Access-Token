@@ -1,8 +1,8 @@
 import JWT from 'jsonwebtoken'
 
-function signToken(payload: object, secretKey: string): string {
+function signToken(payload: object, secretKey: string, expiresIn: string): string {
     const sign = JWT.sign(payload, secretKey, {
-        expiresIn: '30d'
+        expiresIn
     })
     return sign
 }
