@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     MONGO_URI: process.env.MONGO_URI,
     TOKEN_SECRET: process.env.TOKEN_SECRET,
-    TOKEN_REFRESH: process.env.TOKEN_REFRESH,
+    ACCESS_TOKEN: process.env.ACCESS_TOKEN,
     ELASTIC_API: process.env.ELASTIC_API,
     APP_URL: 'http://localhost:3000',
     EMAIL: 'reagansoftwaredev@gmail.com',
