@@ -22,8 +22,8 @@ export default defineNuxtConfig({
     TOKEN_SECRET: process.env.TOKEN_SECRET,
     ACCESS_TOKEN: process.env.ACCESS_TOKEN,
     ELASTIC_API: process.env.ELASTIC_API,
-    APP_URL: 'http://localhost:3000',
-    EMAIL: 'reagansoftwaredev@gmail.com',
+    APP_URL: process.env.APP_URL,
+    EMAIL: process.env.EMAIL,
     public: {
       ELASTIC_URL: 'https://api.elasticemail.com/v4'
     }
