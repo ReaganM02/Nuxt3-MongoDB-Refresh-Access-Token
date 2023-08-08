@@ -70,6 +70,6 @@ const userSchema = new mongoose.Schema<UserSchema>({
         type: Date,
         select: false
     }
-})
+}, { timestamps: true })
 
 export default mongoose.model<UserSchema>('User', userSchema)
