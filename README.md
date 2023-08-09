@@ -5,3 +5,9 @@ This demo showcases seamless user authentication, featuring a refresh access tok
 [![Video Example](./public//thumbnail-1.jpg)](https://www.youtube.com/watch?v=y6ulxSMYf40)
 
 
+Account Verification email template.
+![Account Verification](./public/account-verification.png)
+
+
+Password Reset email template
+![Password Reset](./public/password-reset.png)
