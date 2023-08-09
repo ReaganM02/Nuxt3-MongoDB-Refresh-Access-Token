@@ -8,6 +8,8 @@ definePageMeta({
 
 const loading = ref(false)
 const message = ref<string | null>(null)
+const showPassword = ref(false)
+
 async function onRequestResetPassword(formData: { email: string }, node: FormKitNode | undefined) {
     loading.value = true
     message.value = null
@@ -43,13 +45,19 @@ async function onRequestResetPassword(formData: { email: string }, node: FormKit
                     validation="required:trim|email"
                     name="email"
                 />
+                <div class="mt-4">
+                    <AccountPasswordToggle
+                        :is-visible="showPassword"
+                        @click.prevent="showPassword = !showPassword"
+                    />
+                </div>
                 <p
                     v-if="message"
                     class="text-sm text-center text-green-700 mt-8"
                 >
                     {{ message }}
                 </p>
-                <div class="mt-4">
+                <div class="pt-6">
                     <AccountFormSubmit
                         label="Reset my password"
                         :loading="loading"
@@ -57,6 +65,7 @@ async function onRequestResetPassword(formData: { email: string }, node: FormKit
                 </div>
             </FormKit>
         </div>
+        <AccountNavigate />
     </div>
 </template>
 <style scoped lang="css"></style>

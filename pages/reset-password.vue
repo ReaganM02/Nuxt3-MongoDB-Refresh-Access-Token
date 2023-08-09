@@ -54,6 +54,7 @@ async function onResetPassword(formData: { password: string }, node: FormKitNode
                 </div>
             </FormKit>
         </div>
+        <AccountNavigate />
     </div>
 </template>
 <style scoped lang="css"></style>
