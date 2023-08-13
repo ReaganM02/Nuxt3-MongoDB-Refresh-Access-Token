@@ -10,6 +10,9 @@ export default defineEventHandler(async (event) => {
         if (!user) {
             return createError({ statusCode: 404, statusMessage: 'Email not found.' })
         }
+        if (!user.verified) {
+            return createError({ statusCode: 401, statusMessage: 'User not found.' })
+        }
         const id = generateUuid(6)
         user.resetPassword = await hashStrings(id)
         user.resetPasswordExpAt = new Date(Date.now() + 10 * 60 * 1000) // 10 minutes

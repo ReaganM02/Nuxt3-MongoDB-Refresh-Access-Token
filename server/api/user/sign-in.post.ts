@@ -11,6 +11,9 @@ export default defineEventHandler(async (event) => {
         if (!user) {
             return createError({ statusCode: 401, statusMessage: 'Invalid email or password' })
         }
+        if (!user.verified) {
+            return createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+        }
         const isPasswordCorrect = await compareStrings(body.password, user.password)
         if (!isPasswordCorrect) {
             return createError({ statusCode: 401, statusMessage: 'Invalid email or password' })
