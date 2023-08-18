@@ -4,6 +4,8 @@ This demo showcases seamless user authentication, featuring a refresh access tok
 
 [![Video Example](./public//thumbnail-1.jpg)](https://www.youtube.com/watch?v=y6ulxSMYf40)
 
+Dashboard Example
+![Dashboard Example with Refresh Access Token](./public/dashboard-example.jpg)
 
 Account Verification email template.
 ![Account Verification](./public/account-verification.png)
