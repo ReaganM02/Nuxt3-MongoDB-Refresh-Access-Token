@@ -48,6 +48,22 @@ async function onLogout() {
                     <div class="text-zinc-600 mt-4">
                         Account Created: {{ new Date(userData.createdAt) }}
                     </div>
+                    <div class="text-sm mt-5">
+                        <div class="text-zinc-500">
+                            Refresh Token:
+                        </div>
+                        <div class="whitespace-pre-wrap break-all">
+                            {{ useToken().accessToken }}
+                        </div>
+                        <div class="mt-4">
+                            Refresh access token will automatically refresh every time you refresh the page, and the
+                            previous
+                            refresh token will become invalid.
+                        </div>
+                        <div class="bg-orange-100 p-4 rounded mt-4 text-orange-400">
+                            Note: Do not expose your access token, this is just for demo purposes.
+                        </div>
+                    </div>
                     <div class="mt-10">
                         <button @click.prevent="onLogout">
                             Logout
